@@ -15,7 +15,7 @@ module Draper
   class Railtie < Rails::Railtie
 
     config.after_initialize do |app|
-      app.config.paths.add 'app/decorators', eager_load: true
+      app.config.paths.add 'app/decorators'
 
       if Rails.env.test?
         require 'draper/test_case'
